@@ -1,121 +1,134 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import "./App.css";
+import banner from "./assets/banner.png";
+import logo from "./assets/logo.png";
+import anhCafe1 from "./assets/anh-cafe-1.png";
+import anhCafe2 from "./assets/anh-cafe-2.png";
+import anhCafe3 from "./assets/anh-cafe-3.png";
+import caPheCheBien from "./assets/ca-phe-che-bien.jpg";
+import cafeHienNay from "./assets/cafe-hien-nay.jpg";
+import button from "./assets/button.png";
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      <div
+        className="wrapper"
+        style={{ backgroundImage: `url(${banner})` }}
+      >
+        <div className="overlay">
+          <div className="header">
+            <img src={logo} alt="logo" className="logo" />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+            <nav className="nav">
+              <span>Trang chủ</span>
+              <span>Giới thiệu</span>
+              <span>Thực đơn</span>
+              <span>Tin tức</span>
+              <span>Liên hệ</span>
+              <span>Đặt bàn</span>
+            </nav>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <div className="grid">
+        <img src={anhCafe1}/>
+      <div className="grid-right">
+        <img src={anhCafe2}/>
+        <img src={anhCafe3}/>
+      </div>
+      </div>
+
+      <div className="menu-section">
+  <div className="menu-overlay">
+
+    <h1 className="title">Menu</h1>
+
+    <div className="menu-list">
+      <div className="menu1">
+        <p>Cà phê sữa .............................. 25k</p>
+        <p>Cà phê muối ............................. 25k</p>
+        <p>Cà phê dừa .............................. 25k</p>
+        <p>Cà phê Sữa Sài Gòn ................ 25k</p>
+        <p>Cà phê đen ............................... 20k</p>
+      </div>
+
+      <div className="menu1">
+        <p>Cà phê Espresso ..................... 35k</p>
+        <p>Cà phê Mocha .......................... 35k</p>
+        <p>Cà phê Capuchino ................... 35k</p>
+        <p>Cà phê Latte ............................. 35k</p>
+        <p>Cà phê IceCream Latte ............ 40k</p>
+      </div>
+    </div>
+
+    <button className="btn" style={{ backgroundImage: `url(${button})` }}>
+      <p>Xem thêm Menu</p>
+    </button>
+
+  </div>
+</div>
+      <div className="news">
+        <div className="card1">
+          <img src={caPheCheBien} alt="" />
+          <h3>Chế biến cà phê</h3>
+          <p>Cà phê sạch là cà phê nguyên chất không pha trộn thêm bất kì loại bột, phụ gia nào.</p>
+        </div>
+
+        <div className="card2">
+          <img src={cafeHienNay} alt="" />
+          <h3>Cà phê phổ biến</h3>
+          <p>Điểm danh 20 loại cà phê phổ biến được ưa chuộng tại Việt Nam </p>
+        </div>
+      </div>
+      <div className="footer">
+        <div className="footer-brand">
+          <img src={logo} alt="" className="footer-logo-img"/>
+          <h2>Trần Đình Khánh Coffee</h2>
+        </div>
+  <div className="footer-container">
+    <div className="footer-col">
+      <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+      <p>
+        Chúng tôi mong muốn tạo nên hương vị thức uống tuyệt vời nhất.
+        Là điểm đến đầu tiên dành cho bạn khi muốn thưởng thức trọn vẹn.
+      </p>
+      <div className="social">
+        <button>facebook</button>
+        <button>instagram</button>
+        <button>tiktok</button>
+        <button>twitter</button>
+        <button>youtube</button>
+      </div>
+    </div>
+    <div className="footer-col">
+      <h4>LIÊN HỆ</h4>
+      <p>Xã Ngọk Bay, Quảng Ngãi</p>
+      <p>holine: 0344 559 541</p>
+      <p>Email:tdkhanh.k24tt@kontum.udn.vn</p>
+      <p>facebook: fb.com/tdkhanh</p>
+    </div>
+    <div className="footer-col">
+      <h4>CHÍNH SÁCH</h4>
+      <p>Trang chủ</p>
+      <p>Giới thiệu</p>
+      <p>Thực đơn</p>
+      <p>Tin tức</p>
+      <p>Liên hệ</p>
+      <p>Đặt bàn</p>
+    </div>
+    <div className="footer-col">
+      <h4>FANPAGE</h4>
+      <div className="fanpage-box">
+        <p><b>Meta</b></p>
+        <p>106 người theo dõi</p>
+        <button className="follow-btn">Theo dõi</button>
+      </div>
+      <button className="book-btn">
+        ĐẶT BÀN
+      </button>
+    </div>
+  </div>
+</div>
+    </div>
+  );
 }
-
-export default App
